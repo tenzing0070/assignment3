@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">College_Student</string>
+    <string name="nav_home">Home</string>
+    <string name="add_student">Add Student</string>
+    <string name="nav_aboutus">About Us</string>
+    <string name="nav_addstudent">Add Student</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
