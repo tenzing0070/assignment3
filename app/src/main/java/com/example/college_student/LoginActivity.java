@@ -18,31 +18,43 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_activity);
 
+        getSupportActionBar().hide();
+
         login = (Button) findViewById(R.id.btnlogin);
         username = (EditText) findViewById(R.id.txtusername);
         password = (EditText) findViewById(R.id.txtpassword);
 
-        login.setOnClickListener(new View.OnClickListener() {
-
-
-
+        login.setOnClickListener(this);
+    }
 
     @Override
-    public void onClick(View v) {
-            if (username.getText().toString().equals("softwarica") && password.getText().toString().equals("coventry")) {
-                Intent i = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(i);
-                finish();
-            } else {
-                Toast.makeText(LoginActivity.this, "Incorrect", Toast.LENGTH_SHORT).show();
-                username.requestFocus();
-            }
-        }
-    });
-        }
+    public void onClick(View view) {
+           String userName = username.getText().toString();
+           String passWord = password.getText().toString();
 
-    @Override
-    public void onClick(View v) {
+           if(username.getText().toString().matches("")){
+               username.setError("Enter Your Username");
+               return;
+           }
+           if(password.getText().toString().matches("")){
+               password.setError("Enter correct Password");
+               return;
+           }
+
+           if(userName.equals("softwarica") && passWord.equals("coventry"))
+           {
+               Toast.makeText(getApplicationContext(), "Successfully Login",Toast.LENGTH_LONG).show();
+               Intent intent = new Intent(this,MainActivity.class);
+               startActivity(intent);
+           }
+           else
+           {
+               Toast.makeText(getApplicationContext(),"Incorrect Username OR Password",Toast.LENGTH_LONG).show();
+           }
+           username.getText().clear();
+           password.getText().clear();
+
+
         
     }
 }

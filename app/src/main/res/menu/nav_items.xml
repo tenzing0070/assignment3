@@ -11,7 +11,7 @@
         android:icon="@drawable/addstudent"
         android:title="@string/nav_addstudent" />
     <item
-        android:id="@+id/nav_adbout_us"
+        android:id="@+id/nav_about_us"
         android:icon="@drawable/aboutus"
         android:title="@string/nav_aboutus" />
 </menu>
