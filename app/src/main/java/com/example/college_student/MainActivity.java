@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new HomeFragment()).commit();
 
         studentsList = new ArrayList<>();
-//        studentsList.add(new StudentActivity(R.drawable.male, "Dawa Sherpa", 24, "Male", "Thamel"));
+//
         studentsList.add(new StudentActivity(11, R.drawable.male, "Nick Bay", "Washington", "Male"));
         studentsList.add(new StudentActivity(12, R.drawable.female, "Nicky Mary", "New York", "Female"));
         studentsList.add(new StudentActivity(13, R.drawable.others, "Young Me", "Dallas", "Others"));

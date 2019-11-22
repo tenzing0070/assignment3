@@ -33,9 +33,9 @@ public class AboutUsFragment extends Fragment {
 
         View v = inflater.inflate(R.layout.fragment_about_us, container, false);
         WebView webView = v.findViewById(R.id.webView);
-        webView.getSettings().setJavaScriptEnabled(true); //enables javascript
-        webView.setWebViewClient(new WebViewClient()); //to open URL in app
-        webView.loadUrl("https://softwarica.edu.np"); //replace with URL
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.setWebViewClient(new WebViewClient());
+        webView.loadUrl("https://softwarica.edu.np"); 
         webView.getSettings().setBlockNetworkLoads (false);
         return v;
     }
