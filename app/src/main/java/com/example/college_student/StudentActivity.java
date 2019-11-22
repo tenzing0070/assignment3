@@ -6,32 +6,11 @@ public class StudentActivity {
     private int imageId;
    private String fullname, address, gender;
 
-    public StudentActivity(int imageId, String fullname, int age, String gender, String address) {
+    public StudentActivity(int age, int imageId, String fullname, String address, String gender) {
+        this.age = age;
         this.imageId = imageId;
         this.fullname = fullname;
-        this.age = age;
         this.address = address;
-        this.gender = gender;
-    }
-
-    public String getName() { return fullname;}
-
-    public void setName(String fullname) {this.fullname = fullname;}
-
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
         this.gender = gender;
     }
 
@@ -51,6 +30,27 @@ public class StudentActivity {
         this.imageId = imageId;
     }
 
+    public String getFullname() {
+        return fullname;
+    }
 
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
+    }
 
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
 }

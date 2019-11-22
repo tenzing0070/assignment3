@@ -31,7 +31,7 @@ public class HomeFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.cardview_student, container, false);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
         recyclerView = view.findViewById(R.id.recycleView);
 
         StudentAdapter studentAdapter = new StudentAdapter(getContext(), MainActivity.studentsList);

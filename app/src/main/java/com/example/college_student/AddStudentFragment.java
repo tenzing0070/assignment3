@@ -27,11 +27,11 @@ import java.util.List;
  */
 public class AddStudentFragment extends Fragment  {
 
-    public static List<StudentActivity> studentsList = new ArrayList<>();
+    public static List<StudentActivity> studentsList;
 
     private EditText etfullname, etage,etaddress;
     private RadioGroup Gender;
-    private RadioButton rbtnMale,rbtnFemale,rbtnOther;
+    private RadioButton rbtn;
     private Button Save;
 
     private int imageId, age;
@@ -50,34 +50,29 @@ public class AddStudentFragment extends Fragment  {
         final View view = inflater.inflate(R.layout.fragment_add_student, container, false);
         etfullname = view.findViewById(R.id.fullName);
         etage = view.findViewById(R.id.age);
-        etaddress = view. findViewById(R.id.age);
+        etaddress = view. findViewById(R.id.address);
         Gender = view.findViewById(R.id.rdgGender);
 
-       rbtnMale = view.findViewById(R.id.radio_male);
-       rbtnFemale = view.findViewById(R.id.radio_female);
-       rbtnOther = view.findViewById(R.id.radio_others);
        Save = view.findViewById(R.id.btnSave);
 
-       final int[] image = {R.drawable.male,R.drawable.female,R.drawable.noimage};
+       final int[] image = {R.drawable.male,R.drawable.female,R.drawable.others};
         Save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                fullname = etfullname.getText().toString();
-                address = etaddress.getText().toString();
-                age = Integer.parseInt(etage.getText().toString());
 
                 int selectGender = Gender.getCheckedRadioButtonId();
-                RadioButton radioButton = view.findViewById(selectGender);
-                if (gender.equals("Male")) {
+                rbtn = view.findViewById(selectGender);
+                if (rbtn.getText().toString().equals("Male")) {
                     imageId = image[0];
 
-                } else if (gender.equals("Female")) {
+                } else if (rbtn.getText().toString().equals("Female")) {
                     imageId = image[1];
                 } else {
                     imageId = image[2];
                 }
 
-                StudentActivity students = new StudentActivity(imageId, fullname, age, address, gender);
+                StudentActivity students = new StudentActivity(Integer.parseInt(etage.getText().toString()), imageId, etfullname.getText().toString(),
+                                                                    etaddress.getText().toString(), rbtn.getText().toString());
                 studentsList = MainActivity.studentsList;
                 studentsList.add(students);
                 Toast.makeText(getActivity(), "Registration Successful", Toast.LENGTH_LONG).show();

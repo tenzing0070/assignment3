@@ -17,55 +17,59 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/name"
-        android:gravity="center"
+        android:hint="FullName:"
+        android:layout_marginLeft="10dp"
         android:layout_toEndOf="@+id/imageView"
         android:padding="10dp"
         android:textSize="15sp"
-        android:hint="Name of Student"
         android:layout_toRightOf="@+id/imageView" />
     <Button
 
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:id="@+id/btnDelete"
-        android:layout_toEndOf="@+id/name"
         android:layout_marginLeft="35dp"
         android:background="@drawable/delete"
-        android:layout_toRightOf="@+id/name" />
+        android:layout_margin="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/age"
-        android:gravity="center"
+        android:hint="Age:"
+        android:layout_marginLeft="10dp"
+
         android:layout_toEndOf="@+id/imageView"
         android:layout_below="@+id/name"
         android:textSize="15sp"
         android:padding="10dp"
-        android:hint="Age of Student"
+
         android:layout_toRightOf="@+id/imageView" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/address"
-        android:gravity="center"
+        android:hint="Address:"
+        android:layout_marginLeft="10dp"
         android:layout_toEndOf="@+id/imageView"
         android:layout_below="@+id/age"
         android:textSize="15sp"
         android:padding="10dp"
-        android:hint="Address of Student"
         android:layout_toRightOf="@+id/imageView" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/gender"
+        android:hint="Gender"
+        android:layout_marginLeft="10dp"
         android:gravity="center"
-        android:layout_toEndOf="@+id/address"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentEnd="true"
         android:layout_below="@+id/age"
         android:textSize="15sp"
         android:padding="10dp"
-        android:layout_marginLeft="15dp"
-        android:hint="Gender"
-        android:layout_toRightOf="@+id/address" />
+        android:layout_alignParentRight="true" />
 
 
 </RelativeLayout>
